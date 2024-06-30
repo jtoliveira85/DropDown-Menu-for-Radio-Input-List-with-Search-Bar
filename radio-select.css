@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+main {
+    width: 500px;
+    margin: 200px auto;
+}
+
+.rb-select {
+    display: flex;
+    flex-direction: column;
+}
+
+.my-frm-ctrl {
+    display: block;
+    padding: .375rem .75rem;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 3px solid transparent; 
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    overflow: visible;
+    box-sizing: border-box;
+}
+
+.my-filter-input {
+    width: 100%;
+}
+
+.rb-search {
+    width: 100%;
+}
+
+.rb-label {
+    display: flex;
+    padding: 5px 5px;
+    margin: 3px;
+    gap: 5px;
+}
+
+.rb-label:hover {
+    cursor: pointer;
+    background-color: #E8E8E8;
+    color: #545454;
+    border-radius: 5px;
+}
+
+input[type="text"]:focus {
+    border-color: rgb(68, 122, 204);
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+input[type="radio"] {
+    transform: scale(1.05);
+}
+
+input[type="radio"] {
+    accent-color: rgb(68, 122, 204);
+}
+
+.rb-btn {
+    border: none;
+    padding: 6px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.rb-btn:hover {
+    cursor: pointer;
+}
+
+.field-name {
+    font-size: 14px;
+}
+
+.rb-main {
+    background-color: aquamarine;
+    position: relative;   
+}
+
+.rb-main-container {
+    position: absolute;
+    border: 1px solid #ced4da;
+    margin: 5px;
+    padding: 10px;
+    top: 0;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    max-height: fit-content;
+    visibility: hidden;
+    border-radius: 5px;
+    background-color: #DCDCDC;
+    color: #545454;
+    width: calc(100% - (5 * 2px));
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.rb-main-container.active {
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 100;
+}
+
+.rb-items {
+    min-height: fit-content;
+    overflow: auto;
+    max-height: 130px;
+}
+
+.rb-items::-webkit-scrollbar {
+    width: 4px;
+}
+
+.rb-items::-webkit-scrollbar-thumb {
+    background-color: #5454547e;
+    border-radius: 4px;
+}
+
+.btn-arrow {
+    transition: transform 0.5s ease;
+    display: inline-block;
+}
